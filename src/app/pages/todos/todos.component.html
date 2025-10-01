@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="header">
+      <h1>Todo List</h1>
+    </div>
+
+    @if (isLoading) {
+      <div class="loading">
+        <div class="spinner"></div>
+        <p>Loading todos...</p>
+      </div>
+    } @else {
+      <div class="cards-grid">
+        @for (todo of data; track todo.id) {
+          <a [routerLink]="['/detail', todo.id]" class="card">
+            <div class="card-id">ID: {{ todo.id }}</div>
+            <div class="card-title">{{ todo.title }}</div>
+            <div class="card-user">User: {{ todo.userId }}</div>
+          </a>
+        }
+      </div>
+    }
+  </div>
+  

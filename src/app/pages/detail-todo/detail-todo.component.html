@@ -1,0 +1,13 @@
+<div class="container">
+  <a routerLink="/" class="back-btn">← Back to List</a>
+
+  @if (todo) {
+    <div class="detail-card">
+      <div class="detail-id">ID: {{ todo.id }}</div>
+      <div class="detail-title">{{ todo.title }}</div>
+      <div class="detail-user">User ID: {{ todo.userId }}</div>
+    </div>
+  } @else {
+    <div class="loading">Loading...</div>
+  }
+</div>
