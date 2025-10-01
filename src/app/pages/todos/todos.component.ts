@@ -68,7 +68,7 @@ export class TodosComponent {
     // Open Graph protocol was created by Facebook but now used by almost all social media platforms
     // IMPORTANT: Must be a direct image URL (not a redirect) and accessible publicly
     // Recommended: Use absolute URL with https://, minimum 1200x630px for best results
-    this.meta.addTag({ property:'og:image', content: 'https://via.placeholder.com/1200x630.png?text=Todo+App'});
+    this.meta.addTag({ property:'og:image', content: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=630&fit=crop'});
     this.meta.addTag({ property:'og:image:width', content: '1200'});
     this.meta.addTag({ property:'og:image:height', content: '630'});
     this.meta.addTag({ property:'og:type', content: 'website'});
