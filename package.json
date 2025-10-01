@@ -4,10 +4,15 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "npm run build:ssr",
+    "build:client": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:seo-angular-18": "node dist/seo-angular-18/server/server.mjs"
+    "dev:ssr": "ng run seo-angular-18:serve-ssr",
+    "serve:ssr:seo-angular-18": "node dist/seo-angular-18/server/server.mjs",
+    "build:ssr": "ng build && ng run seo-angular-18:server",
+    "serve:ssr": "node dist/seo-angular-18/server/server.mjs",
+    "prerender": "ng run seo-angular-18:prerender"
   },
   "private": true,
   "dependencies": {
