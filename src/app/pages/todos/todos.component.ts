@@ -66,7 +66,12 @@ export class TodosComponent {
 
     // og:image: Thumbnail/preview image displayed in social media card when link is shared
     // Open Graph protocol was created by Facebook but now used by almost all social media platforms
-    this.meta.addTag({ property:'og:image', content: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fletsenhance.io%2F&psig=AOvVaw2FmLm4hc1yzGKXCRRyHWB-&ust=1759417297268000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCOCV8qmig5ADFQAAAAAdAAAAABAE'});
+    // IMPORTANT: Must be a direct image URL (not a redirect) and accessible publicly
+    // Recommended: Use absolute URL with https://, minimum 1200x630px for best results
+    this.meta.addTag({ property:'og:image', content: 'https://via.placeholder.com/1200x630.png?text=Todo+App'});
+    this.meta.addTag({ property:'og:image:width', content: '1200'});
+    this.meta.addTag({ property:'og:image:height', content: '630'});
+    this.meta.addTag({ property:'og:type', content: 'website'});
 
   }
 }
