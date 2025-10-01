@@ -1,0 +1,200 @@
+// Mobile-First Responsive Design with Best UI/UX Practices
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 16px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    animation: fadeIn 0.5s ease-out;
+
+    // Tablet
+    @media (min-width: 768px) {
+        padding: 24px;
+    }
+
+    // Desktop
+    @media (min-width: 1024px) {
+        max-width: 900px;
+        padding: 32px 24px;
+    }
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding: 10px 18px;
+    background: white;
+    border: 2px solid #e8ecef;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #4a5568;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+        background: #667eea;
+        color: white;
+        border-color: #667eea;
+        transform: translateX(-4px);
+        box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+    }
+
+    &:active {
+        transform: translateX(-2px);
+    }
+
+    // Tablet and up
+    @media (min-width: 768px) {
+        padding: 12px 24px;
+        font-size: 15px;
+        margin-bottom: 28px;
+        border-radius: 12px;
+    }
+}
+
+.detail-card {
+    background: white;
+    border: 1px solid #e8ecef;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    }
+
+    // Tablet and up
+    @media (min-width: 768px) {
+        padding: 32px;
+        border-radius: 20px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    // Desktop
+    @media (min-width: 1024px) {
+        padding: 40px;
+    }
+}
+
+.detail-id {
+    color: #8b95a5;
+    font-size: 12px;
+    margin-bottom: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 6px 14px;
+    background: #f7fafc;
+    border-radius: 20px;
+    border: 1px solid #e8ecef;
+
+    @media (min-width: 768px) {
+        font-size: 13px;
+        margin-bottom: 16px;
+        padding: 8px 16px;
+    }
+}
+
+.detail-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    word-wrap: break-word;
+
+    @media (min-width: 768px) {
+        font-size: 26px;
+        margin-bottom: 24px;
+    }
+
+    @media (min-width: 1024px) {
+        font-size: 32px;
+        margin-bottom: 28px;
+    }
+}
+
+.detail-user {
+    color: #718096;
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    background: #f7fafc;
+    border-radius: 10px;
+    border: 1px solid #e8ecef;
+
+    &::before {
+        content: '=d';
+        font-size: 18px;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 16px;
+        padding: 12px 20px;
+        border-radius: 12px;
+    }
+
+    @media (min-width: 1024px) {
+        font-size: 17px;
+        padding: 14px 24px;
+    }
+}
+
+.loading {
+    text-align: center;
+    padding: 80px 20px;
+    color: #4a5568;
+    font-size: 16px;
+    font-weight: 500;
+    animation: fadeIn 0.4s ease-out;
+
+    @media (min-width: 768px) {
+        padding: 120px 20px;
+        font-size: 18px;
+    }
+
+    @media (min-width: 1024px) {
+        padding: 150px 20px;
+        font-size: 20px;
+    }
+}
+
+// Animations
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
