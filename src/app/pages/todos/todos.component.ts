@@ -20,7 +20,6 @@ export class TodosComponent {
   titleService = inject(Title)
 
   ngOnInit(): void {
-    this.updateMetaTags();
     this.getTodos();
   }
 
@@ -29,6 +28,7 @@ export class TodosComponent {
     this.todoService.getTodos().subscribe({
       next: (resp: Todo[]) => {
         this.data = resp;
+        this.updateMetaTags();
         this.isLoading = false;
       },
       error: () => {
@@ -43,7 +43,7 @@ export class TodosComponent {
    */
   updateMetaTags() {
     // Set page title that will appear in browser tab and search results
-    this.titleService.setTitle('Todos | Home');
+    this.titleService.setTitle(`Todos | Total of ${this.data.length}`);
 
     // Standard Meta Tags for SEO
 
@@ -72,6 +72,5 @@ export class TodosComponent {
     this.meta.addTag({ property:'og:image:width', content: '1200'});
     this.meta.addTag({ property:'og:image:height', content: '630'});
     this.meta.addTag({ property:'og:type', content: 'website'});
-
   }
 }
