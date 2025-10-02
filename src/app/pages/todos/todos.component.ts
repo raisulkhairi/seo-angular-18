@@ -43,7 +43,7 @@ export class TodosComponent {
    */
   updateMetaTags() {
     // Set page title that will appear in browser tab and search results
-    this.titleService.setTitle('Todos | Home');
+    this.titleService.setTitle(`Todos | Total of ${this.data.length} title`);
 
     // Standard Meta Tags for SEO
 
