@@ -43,7 +43,7 @@ export class TodosComponent {
    */
   updateMetaTags() {
     // Set page title that will appear in browser tab and search results
-    this.titleService.setTitle('Todo App - Manage Your Tasks');
+    this.titleService.setTitle(`Todo App - Manage Your Tasks - ${this.data.length} | title`);
 
     // Standard Meta Tags for SEO
 
@@ -59,7 +59,7 @@ export class TodosComponent {
     // These tags control how the page appears when shared on Facebook, Twitter, LinkedIn, WhatsApp, etc.
 
     // Open Graph: og:title - Title displayed in social media preview card when link is shared
-    this.meta.updateTag({ property: 'og:title', content: 'Todo App - Manage Your Tasks'});
+    this.meta.updateTag({ property: 'og:title', content: `Todo App - Manage Your Tasks ${this.data.length}`});
 
     // Open Graph: og:description - Description shown in social media preview card
     this.meta.updateTag({ property: 'og:description', content: 'A simple and elegant todo application built with Angular 18. Manage your tasks efficiently.'});

@@ -5,7 +5,10 @@
       "Bash(findstr:*)",
       "Bash(taskkill:*)",
       "Bash(npm run build:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Read(//c/Users/raisulkhairi/salt-project/wec-fe-device-bundling/**)",
+      "Bash(npm run build:preprod:*)",
+      "Bash(timeout 5 npm run serve:ssr)"
     ],
     "deny": [],
     "ask": []
