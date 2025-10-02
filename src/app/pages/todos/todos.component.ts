@@ -43,7 +43,7 @@ export class TodosComponent {
    */
   updateMetaTags() {
     // Set page title that will appear in browser tab and search results
-    this.titleService.setTitle(`Todos | Total of ${this.data.length}`);
+    this.titleService.setTitle('Todos | Home');
 
     // Standard Meta Tags for SEO
 
@@ -59,7 +59,7 @@ export class TodosComponent {
     // These tags control how the page appears when shared on Facebook, Twitter, LinkedIn, WhatsApp, etc.
 
     // og:title: Title displayed in social media preview card when link is shared
-    this.meta.addTag({ property: 'og:title', content:'Todo App - Home'});
+    this.meta.addTag({ property: 'og:title', content:`Todos | Total of ${this.data.length}`});
 
     // og:description: Description shown in social media preview card
     this.meta.addTag({ property: 'og:description', content: 'Welcome to the home page todos'});
