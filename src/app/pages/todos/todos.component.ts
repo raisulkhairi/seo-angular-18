@@ -58,19 +58,64 @@ export class TodosComponent {
     // Open Graph Meta Tags for Social Media Sharing
     // These tags control how the page appears when shared on Facebook, Twitter, LinkedIn, WhatsApp, etc.
 
-    // og:title: Title displayed in social media preview card when link is shared
-    this.meta.updateTag({ property: 'og:title', content: `Todos | Total of ${this.data.length}`});
+    // Open Graph: og:title - Title displayed in social media preview card when link is shared
+    this.meta.updateTag({ property: 'og:title', content: 'Todo App - Manage Your Tasks'});
 
-    // og:description: Description shown in social media preview card
+    // Open Graph: og:description - Description shown in social media preview card
     this.meta.updateTag({ property: 'og:description', content: 'A simple and elegant todo application built with Angular 18. Manage your tasks efficiently.'});
 
-    // og:image: Thumbnail/preview image displayed in social media card when link is shared
-    // Open Graph protocol was created by Facebook but now used by almost all social media platforms
-    // IMPORTANT: Must be a direct image URL (not a redirect) and accessible publicly
-    // Recommended: Use absolute URL with https://, minimum 1200x630px for best results
-    this.meta.updateTag({ property:'og:image', content: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=630&fit=crop&q=80'});
-    this.meta.updateTag({ property:'og:image:width', content: '1200'});
-    this.meta.updateTag({ property:'og:image:height', content: '630'});
-    this.meta.updateTag({ property:'og:type', content: 'website'});
+    // Open Graph: og:type - Type of content (website, article, video, etc.)
+    this.meta.updateTag({ property: 'og:type', content: 'website'});
+
+    // Open Graph: og:url - Canonical URL of the page (update with your actual URL)
+    this.meta.updateTag({ property: 'og:url', content: 'https://seo-angular-18.vercel.app/todos'});
+
+    // Open Graph: og:site_name - Name of the overall site
+    this.meta.updateTag({ property: 'og:site_name', content: 'Todo App'});
+
+    // Open Graph: og:locale - Language and region (en_US, id_ID, etc.)
+    this.meta.updateTag({ property: 'og:locale', content: 'en_US'});
+
+    // Open Graph: og:image - Thumbnail/preview image displayed in social media card
+    // IMPORTANT: Must be a direct image URL, minimum 1200x630px for best results
+    this.meta.updateTag({ property: 'og:image', content: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=630&fit=crop&q=80'});
+
+    // Open Graph: og:image:secure_url - HTTPS version of image URL
+    this.meta.updateTag({ property: 'og:image:secure_url', content: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=630&fit=crop&q=80'});
+
+    // Open Graph: og:image:type - MIME type of the image
+    this.meta.updateTag({ property: 'og:image:type', content: 'image/jpeg'});
+
+    // Open Graph: og:image:width - Image width in pixels
+    this.meta.updateTag({ property: 'og:image:width', content: '1200'});
+
+    // Open Graph: og:image:height - Image height in pixels
+    this.meta.updateTag({ property: 'og:image:height', content: '630'});
+
+    // Open Graph: og:image:alt - Alt text for the image (accessibility & SEO)
+    this.meta.updateTag({ property: 'og:image:alt', content: 'Todo App - Task Management Interface'});
+
+    // Twitter Card: twitter:card - Type of Twitter card (summary_large_image recommended for images)
+    this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image'});
+
+    // Twitter Card: twitter:title - Title for Twitter card
+    this.meta.updateTag({ name: 'twitter:title', content: 'Todo App - Manage Your Tasks'});
+
+    // Twitter Card: twitter:description - Description for Twitter card
+    this.meta.updateTag({ name: 'twitter:description', content: 'A simple and elegant todo application built with Angular 18. Manage your tasks efficiently.'});
+
+    // Twitter Card: twitter:image - Image for Twitter card
+    this.meta.updateTag({ name: 'twitter:image', content: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=630&fit=crop&q=80'});
+
+    // Twitter Card: twitter:image:alt - Alt text for Twitter image
+    this.meta.updateTag({ name: 'twitter:image:alt', content: 'Todo App - Task Management Interface'});
+
+    // Additional SEO Meta Tags
+
+    // robots - Control search engine indexing and crawling behavior
+    this.meta.updateTag({ name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'});
+
+    // theme-color - Browser theme color for mobile browsers
+    this.meta.updateTag({ name: 'theme-color', content: '#667eea'});
   }
 }
