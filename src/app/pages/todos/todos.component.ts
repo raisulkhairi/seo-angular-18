@@ -99,7 +99,7 @@ export class TodosComponent {
     this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image'});
 
     // Twitter Card: twitter:title - Title for Twitter card
-    this.meta.updateTag({ name: 'twitter:title', content: 'Todo App - Manage Your Tasks'});
+    this.meta.updateTag({ name: 'twitter:title', content: 'Todo App - Manage Your Tasks - twitter'});
 
     // Twitter Card: twitter:description - Description for Twitter card
     this.meta.updateTag({ name: 'twitter:description', content: 'A simple and elegant todo application built with Angular 18. Manage your tasks efficiently.'});
