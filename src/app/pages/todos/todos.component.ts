@@ -59,7 +59,7 @@ export class TodosComponent {
     // These tags control how the page appears when shared on Facebook, Twitter, LinkedIn, WhatsApp, etc.
 
     // Open Graph: og:title - Title displayed in social media preview card when link is shared
-    this.meta.updateTag({ property: 'og:title', content: `Todo App - Manage Your Tasks ${this.data.length}`});
+    this.meta.updateTag({ property: 'og:title', content: `Todo App - Manage Your Tasks - ${this.data.length}`});
 
     // Open Graph: og:description - Description shown in social media preview card
     this.meta.updateTag({ property: 'og:description', content: 'A simple and elegant todo application built with Angular 18. Manage your tasks efficiently.'});
